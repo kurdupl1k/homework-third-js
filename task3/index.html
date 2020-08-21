@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+      #likeButton {
+        width: 165px;
+        height: 50px;
+        border-radius: 10px;
+        margin: 100px auto;
+        background-color: #4093f7;
+        border: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      #likeButton:enabled {
+        outline: none;
+      }
+
+      #likeButton:hover {
+        cursor: pointer;
+      }
+
+      #likeButton:active {
+        background-color: #4f66ff;
+      }
+
+      #likeButton img, #likeButton p {
+        margin: auto 0;
+      }
+
+      #likeButton p {
+        color: white;
+        font-size: 24px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button id="likeButton">
+      <img src="img/like.png">
+      <p>Like</p>
+      <p id="counter">0</p>
+    </button>
+    <script>
+
+      document.getElementById("likeButton").onclick = function () {
+        let c = document.getElementById("counter");
+        c.textContent = Number.parseInt(c.textContent) + 1;
+      }
+
+    </script>
+  </body>
+</html>
